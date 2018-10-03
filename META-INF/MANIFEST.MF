@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: ASTParserSample
+Bundle-SymbolicName: ASTParserSample
+Bundle-Version: 1.0.0.qualifier
+Automatic-Module-Name: ASTParserSample
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Require-Bundle: org.eclipse.core.runtime;bundle-version="3.13.0",
+ org.eclipse.jdt.core;bundle-version="3.13.102",
+ org.eclipse.jface;bundle-version="3.13.2",
+ org.eclipse.jface.text;bundle-version="3.12.2",
+ org.eclipse.swt
+Import-Package: org.eclipse.core.internal.resources
