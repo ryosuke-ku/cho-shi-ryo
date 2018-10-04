@@ -28,7 +28,7 @@ public class Sample1 {
 	@SuppressWarnings("deprecation")
 	public static void main(String[] args) throws Exception {
 
-		String dir_path = "C:\\pbl";  //検索開始したいフォルダのPath
+		String dir_path = "C:\\pleiades\\workspace\\apache-ant-1.10.5";  //検索開始したいフォルダのPath
 		String extension = "Test.java";   //検索したいTestファイルの拡張子(今回は"<クラス名+Test>"をテストコードとする)
 
 		String data[];
@@ -98,7 +98,7 @@ public class Sample1 {
 		}
 	}
 
-	static String[] FilePath = new String[1000];
+	static String[] FilePath = new String[10000];
 	static int k=0;
 
 	public static String[] file_search(String path, String extension){
