@@ -34,7 +34,7 @@ public class SampleVisitor1 extends ASTVisitor {
 
 		Print.printMessage("ClassName", className);
 		Print.printModifiers("Modifiers", modifiers);
-		Print.printMessage("SuperClass", superClass.getBinaryName());
+//		Print.printMessage("SuperClass", superClass.getBinaryName());
 		Print.printMessage("Interfaces", interfaces);
 		return super.visit(node);
 	}
@@ -65,6 +65,8 @@ public class SampleVisitor1 extends ASTVisitor {
 		Print.printTitle("Method declaration");
 		Print.printMessage("MethodName", node.getName()
 				.getFullyQualifiedName());
+		String[] testName = new String[100000];
+
 		Print.printModifiers("Modifiers", node.getModifiers());
 		Print.printMessage("ReturnType", node.getReturnType2() + "");
 		Print.printMessage("Parameters", node.parameters().toString());
