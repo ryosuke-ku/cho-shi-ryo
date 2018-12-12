@@ -52,7 +52,7 @@ public class SampleVisitor1 extends ASTVisitor {
 			if (frg instanceof VariableDeclarationFragment) {
 				IVariableBinding variableBinding = ((VariableDeclarationFragment) frg)
 						.resolveBinding();
-				Print.printMessage("Name", variableBinding.getName());
+		//		Print.printMessage("Name", variableBinding.getName());
 			}
 		}
 		return super.visit(node);

@@ -1,3 +1,4 @@
+
 package info.haxahaxa.astparser.sample;
 
 import java.io.BufferedReader;
@@ -22,28 +23,30 @@ import info.haxahaxa.astparser.util.SourceFile;
  * @author satanabe1
  *
  */
-public class Sample1 {
+public class CollectTestFiles{
 	private static ASTVisitor visitor = new SampleVisitor1();
 
 	@SuppressWarnings("deprecation")
 	public static void main(String[] args) throws Exception {
 
-		String dir_path = "C:\\pleiades\\workspace\\apache-ant-1.10.5";  //検索開始したいフォルダのPath
+		String dir_path = "/home/user/Desktop/FACoY/data_set/Git_20161108/vishnun_SHOPAHOLIC" + 
+				"";  //検索開始したいフォルダのPath
 		String extension = "Test.java";   //検索したいTestファイルの拡張子(今回は"<クラス名+Test>"をテストコードとする)
 
 		String data[];
 		data = file_search(dir_path, extension);
 
-		Sample1 s = new Sample1();
+		CollectTestFiles s = new CollectTestFiles();
 
 
 		for(int i=0;i<data.length;i++) {
 
 			System.out.println("テストファイルのPath["+i+ "]--> "+ data[i]);
 
+
 			FileReader f = null;
 			f = new FileReader(data[i]);
-			s.loadJavaFile(f);
+	     	s.loadJavaFile(f);
 
 			SourceFile sourceFile = new SourceFile(data[i]);
 			CompilationUnit unit;
@@ -98,7 +101,7 @@ public class Sample1 {
 		}
 	}
 
-	static String[] FilePath = new String[10000];
+	static String[] FilePath = new String[10000000];
 	static int k=0;
 
 	public static String[] file_search(String path, String extension){
@@ -119,5 +122,3 @@ public class Sample1 {
 		return FilePath;
 	}
 }
-
-
